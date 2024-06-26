@@ -1,0 +1,131 @@
+.dropdown {
+  position: relative;
+  width: 20rem;
+}
+
+.dropdownSelect {
+  width: inherit;
+  padding: 12px 24px;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgba(34, 34, 34, 0.7);
+  border: none;
+  border-radius: 1rem;
+}
+
+.dropdownOptions {
+  background-color: #FFF;
+  width: inherit;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border: 1px solid #AAA;
+  height: 19rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0.5rem;
+}
+
+.fewOptions {
+  height: auto;
+}
+
+.dropdownOptions input {
+  width: 90%;
+  margin: 0.2rem 1rem 0.2rem 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.dropdownOptions ul {
+  padding: 1rem;
+  padding-top: 0;
+  width: 100%;
+}
+
+.dropdownOptions ul li {
+  list-style: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.dropdownOptions ul li:nth-child(2n) {
+  background-color: #EEE;
+}
+
+.neon {
+  animation-name: neon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes neon {
+  0% {
+    color: #222;
+    text-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  50% {
+    color: #FFCA03;
+    text-shadow: 0 5px 40px #FFCA03;
+  }
+
+  50.1% {
+    color: #FFCA03;
+    text-shadow: 0 5px 40px #FFCA03;
+  }
+
+  100% {
+    color: #222;
+    text-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.exploring {
+  color: #222;
+  text-shadow: 0 2px 20px #39e40e,
+    0 2px 40px #36f008,
+    0 2px 80px #34ff01;
+}
+
+@media only screen and (max-width: 768px) {
+  .dropdown {
+    width: 14rem;
+  }
+
+  .dropdownSelect {
+    font-size: 2.5rem;
+  }
+
+  .dropdownOptions {
+    top: 40%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .dropdown {
+    width: 11rem;
+  }
+
+  .dropdownSelect {
+    font-size: 2rem;
+  }
+
+  .dropdownOptions input {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .dropdownOptions ul li {
+    font-size: 0.9rem;
+  }
+}

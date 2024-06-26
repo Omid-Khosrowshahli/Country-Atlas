@@ -1,0 +1,74 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.logoText {
+  font-size: var(--logo-font-size);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: inherit;
+  font-size: var(--info-font-size);
+}
+
+main {
+  flex: 1;
+  max-width: 1500px;
+}
+
+footer {
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: #FFF;
+}
+
+@media only screen and (min-width: 1500px) {
+  main {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: 3rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .logoText {
+    display: none;
+  }
+
+  .logoContainer img {
+    scale: 0.8;
+  }
+}
